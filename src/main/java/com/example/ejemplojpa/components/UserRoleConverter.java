@@ -12,6 +12,7 @@ public class UserRoleConverter {
         UserRole userRole = new UserRole();
         userRole.setRole(userRoleModel.getRole());
         userRole.setUserRoleId(userRoleModel.getUserRoleId());
+        userRole.setUser(userRoleModel.getUser());
         return userRole;
     }
 
@@ -19,6 +20,7 @@ public class UserRoleConverter {
         UserRoleModel userRoleModel = new UserRoleModel();
         userRoleModel.setRole(userRole.getRole());
         userRoleModel.setUserRoleId(userRole.getUserRoleId());
+        userRoleModel.setUser(userRole.getUser());
         return userRoleModel;
     }
 }

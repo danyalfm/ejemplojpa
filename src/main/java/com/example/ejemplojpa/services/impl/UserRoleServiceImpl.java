@@ -43,19 +43,19 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
         @Override
-        public UserRole findUserRoleById (int userRoleId){
-        return userRoleRepository.findById(userRoleId);
+        public UserRole findUserRoleByUserRoleId (int userRoleId){
+        return userRoleRepository.findByUserRoleId(userRoleId);
     }
 
-        public UserRoleModel findUserRoleByIdModel (int userRoleId){
-        return userRoleConverter.convertUserRole2UserRoleModel(findUserRoleById(userRoleId));
+        public UserRoleModel findUserRoleByUserRoleIdModel (int userRoleId){
+        return userRoleConverter.convertUserRole2UserRoleModel(findUserRoleByUserRoleId(userRoleId));
     }
 
         @Override
         public void removeUserRole (int userRoleId){
-        UserRole userRole = findUserRoleById(userRoleId);
+        UserRole userRole = findUserRoleByUserRoleId(userRoleId);
         if (userRole != null) {
-            userRoleRepository.delete(findUserRoleById(userRoleId));
+            userRoleRepository.delete(findUserRoleByUserRoleId(userRoleId));
         }
 
     }

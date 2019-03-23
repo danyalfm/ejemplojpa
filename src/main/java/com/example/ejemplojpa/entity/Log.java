@@ -15,7 +15,7 @@ public class Log {
     private int id;
 
     @Column(name = "date")
-    private String date;
+    private Date date;
 
     @Column(name = "details")
     private String details;
@@ -31,7 +31,7 @@ public class Log {
     }
 
 
-    public Log(String date, String details, String username, String url) {
+    public Log(Date  date, String details, String username, String url) {
         this.date = date;
         this.details = details;
         this.username = username;

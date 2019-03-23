@@ -30,7 +30,7 @@ public class UserRole {
         this.user = user;
         this.role = role;
         this.userRoleId = userRoleId;
+        this.user = user;
     }
-
 
 }

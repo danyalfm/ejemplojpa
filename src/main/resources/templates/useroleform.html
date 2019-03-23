@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Backend Ninja - Add/modify User</title>
+    <title>Backend Ninja - Add/modify UserRole</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet"
@@ -17,17 +17,17 @@
 
 <div class="jumbotron">
     <div class="container">
-        <h1>User Form</h1>
+        <h1>User Role Form</h1>
         <br/>
-        <form action="#" th:action="@{/user/adduser}" th:object="${userModel}" method="post">
-            User Name: <input type="text" class="form-control" th:field="*{username}" th:value="${username}"></input>
+        <form action="#" th:action="@{/userRole/adduserRole}" th:object="${userRoleModel}" method="post">
+            <input type="hidden" th:field="*{userRoleId}"></input>
+            Role: <input type="text" class="form-control" th:field="*{role}" th:value="${role}"></input>
             <br/>
-            Password: <input type="text" class="form-control" th:field="*{password}" th:value="${password}"></input>
-            <br/>
-            <select class="form-control" th:field="*{enabled}">
-                <option value="true">True</option>
-                <option value="false"> False</option>
+            Username:
+            <select class="form-control" th:field="*{user}">
+                <option value="username">username</option>
             </select>
+
             <br/>
             <br/>
             <button class="btn btn-lg btn-primary btn-block" type="submit">
@@ -35,7 +35,7 @@
             </button>
 
         </form>
-        <a href="#" th:href="@{/user/cancel}">
+        <a href="#" th:href="@{/userRole/cancel}">
             <button class="btn btn-lg btn-primary btn-block" type="submit">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
             </button>

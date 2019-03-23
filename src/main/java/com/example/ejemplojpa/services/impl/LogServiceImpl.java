@@ -44,10 +44,12 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public Log findLogById(int id) {
+
         return logRepository.findById(id);
     }
 
     public LogModel findLogByIdModel(int id) {
+
         return logConverter.convertLog2LogModel(findLogById(id));
     }
 

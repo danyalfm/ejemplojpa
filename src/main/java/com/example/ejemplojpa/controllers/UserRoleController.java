@@ -32,7 +32,7 @@ public class UserRoleController {
                                        @RequestParam(name = "userRoleId", required = false) int userRoleId){
         UserRoleModel userRoleModel = new UserRoleModel();
         if(userRoleId != 0){
-            userRoleModel = userRoleService.findUserRoleByIdModel(userRoleId);
+            userRoleModel = userRoleService.findUserRoleByUserRoleIdModel(userRoleId);
         }
         model.addAttribute("userRoleModel", userRoleModel);
         return ViewConstant.USER_ROLE_FORM;

@@ -21,7 +21,7 @@
         <br/>
         <form action="#" th:action="@{/log/addlog}" th:object="${logModel}" method="post">
             <input type="hidden" th:field="*{id}"></input>
-            Date: <input type="datetime-local" class="form-control" th:field="*{date}" th:value="${date}"></input>
+            Date: <input type="text" class="form-control" th:field="*{date}" th:value="${date}"></input>
             <br/>
             Username: <input type="text" class="form-control" th:field="*{username}" th:value="${username}"></input>
             <br/>
@@ -42,6 +42,5 @@
         </a>
     </div>
 </div>
-
 </body>
 </html>

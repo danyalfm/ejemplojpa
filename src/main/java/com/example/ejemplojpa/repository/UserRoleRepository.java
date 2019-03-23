@@ -8,5 +8,5 @@ import java.io.Serializable;
 
 @Repository("userRoleRepository")
 public interface UserRoleRepository extends JpaRepository<UserRole, Serializable> {
-    public abstract UserRole findById(int userRoleId);
+    public abstract UserRole findByUserRoleId(int userRoleId);
 }

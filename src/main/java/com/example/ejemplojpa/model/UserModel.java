@@ -8,6 +8,7 @@ public class UserModel {
     private String password;
     private boolean enabled;
 
+
     public UserModel() {
 
     }

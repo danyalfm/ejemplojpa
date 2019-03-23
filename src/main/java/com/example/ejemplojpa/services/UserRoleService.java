@@ -11,10 +11,10 @@ public interface UserRoleService {
 
     public abstract List<UserRoleModel> listAllUserRoles();
 
-    public abstract UserRole findUserRoleById(int userRoleId);
+    public abstract UserRole findUserRoleByUserRoleId(int userRoleId);
 
     public abstract void removeUserRole(int userRoleId);
 
-    public abstract UserRoleModel findUserRoleByIdModel(int userRoleId);
+    public abstract UserRoleModel findUserRoleByUserRoleIdModel(int userRoleId);
 
 }
